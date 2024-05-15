@@ -34,9 +34,10 @@ server.post("/insert", (req, res) => {
 });
 
 server.delete("/delete", (req, res) => {
+  console.log("here");
   const { id } = req.body;
   connection.query(`delete from expenses where id=${id}`);
-  res.send();
+  res.send("");
 });
 
 server.get("/edit/:id", (req, res) => {

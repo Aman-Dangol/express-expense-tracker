@@ -4,7 +4,7 @@ import { getAllEditButtons } from "./editbtn.js";
 async function start() {
   await getTableData();
   getAllEditButtons();
-  allDelelteButtons(getTableData);
+  allDelelteButtons(start);
 }
 
 start();
