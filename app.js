@@ -58,6 +58,6 @@ server.post("/update", (req, res) => {
   connection.query(
     `update  expenses set title='${title}',category='${category}',amount=${amount} where id=${id} `
   );
-  res.json(req.body);
+  res.redirect("/");
 });
 server.listen(8000);
