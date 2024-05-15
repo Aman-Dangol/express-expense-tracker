@@ -12,6 +12,16 @@ h1 {
   text-align: center;
 }
 
+button,
+a[class="editBtn"] {
+  border: none;
+  padding: 8px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
 /* working with forms */
 
 form {
@@ -22,6 +32,7 @@ form {
 }
 
 form > button {
+  border-radius: 0;
   cursor: pointer;
   padding: 4px;
   grid-column: span 2;
@@ -54,4 +65,14 @@ td {
   padding: 4px;
   width: 70px;
   text-align: center;
+}
+/* working onn delete button */
+
+.delBtn {
+  background-color: rgb(255, 0, 0);
+}
+
+/* working on edit button */
+.editBtn {
+  background-color: blue;
 }

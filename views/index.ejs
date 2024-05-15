@@ -17,7 +17,12 @@
           <label for="title">Title</label>
           <input type="text" name="title" />
           <label for="category">Category</label>
-          <input type="text" name="category" />
+          <select name="category">
+            <option value="food" selected>food</option>
+            <option value="drink">drink</option>
+            <option value="sweets">sweets</option>
+            <option value="fruits">fruits</option>
+          </select>
           <label for="amount">Amount</label>
           <input type="text" name="amount" />
           <button>Submit</button>
@@ -29,9 +34,12 @@
           <thead>
             <th>id</th>
             <th>title</th>
+            <th>category</th>
             <th>amount</th>
             <th>delete</th>
+            <th>edit</th>
           </thead>
+          <!-- gets data from tableData.ejs -->
           <tbody id="tbody"></tbody>
         </table>
       </section>

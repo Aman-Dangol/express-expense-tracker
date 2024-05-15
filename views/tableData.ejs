@@ -2,9 +2,15 @@
 <tr>
   <td><%= element.id %></td>
   <td><%= element.title %></td>
+  <td><%= element.category %></td>
   <td><%= element.amount %></td>
   <td>
-    <button id="<%= element.id  %>" class="expID">Delete</button>
+    <button id="<%= element.id  %>" class="expID delBtn">Delete</button>
+  </td>
+  <td>
+    <a href="/edit/<%= element.id  %>" id="<%= element.id  %>" class="editBtn"
+      >Edit</a
+    >
   </td>
 </tr>
 <% }) %>

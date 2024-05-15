@@ -39,4 +39,25 @@ server.delete("/delete", (req, res) => {
   res.send();
 });
 
+server.get("/edit/:id", (req, res) => {
+  const { id } = req.params;
+  connection.query(
+    `select * from expenses where id = ${id}`,
+    (err, data, field) => {
+      if (err) {
+        res.sendStatus(404);
+        return;
+      }
+      res.render("edit", { data: data });
+    }
+  );
+});
+
+server.post("/update", (req, res) => {
+  const { id, title, category, amount } = req.body;
+  connection.query(
+    `update  expenses set title='${title}',category='${category}',amount=${amount} where id=${id} `
+  );
+  res.json(req.body);
+});
 server.listen(8000);
