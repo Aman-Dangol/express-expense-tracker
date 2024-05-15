@@ -14,13 +14,13 @@
       <!-- form for insert -->
       <section>
         <form action="/insert" method="post">
-          <label for="title">title</label>
+          <label for="title">Title</label>
           <input type="text" name="title" />
-          <label for="category">category</label>
+          <label for="category">Category</label>
           <input type="text" name="category" />
-          <label for="amount">amount</label>
+          <label for="amount">Amount</label>
           <input type="text" name="amount" />
-          <button >submit</button>
+          <button>Submit</button>
         </form>
       </section>
       <!-- table section -->
@@ -30,18 +30,12 @@
             <th>id</th>
             <th>title</th>
             <th>amount</th>
+            <th>delete</th>
           </thead>
-          <tbody>
-            <% data.forEach(element => { %>
-            <tr>
-              <td><%= element.id %></td>
-              <td><%= element.title %></td>
-              <td><%= element.amount %></td>
-            </tr>
-            <% }) %>
-          </tbody>
+          <tbody id="tbody"></tbody>
         </table>
       </section>
     </main>
   </body>
+  <script src="/public/js/main.js" type="module"></script>
 </html>

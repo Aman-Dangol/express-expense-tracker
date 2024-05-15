@@ -1,0 +1,10 @@
+<% data.forEach(element => { %>
+<tr>
+  <td><%= element.id %></td>
+  <td><%= element.title %></td>
+  <td><%= element.amount %></td>
+  <td>
+    <button id="<%= element.id  %>" class="expID">Delete</button>
+  </td>
+</tr>
+<% }) %>
