@@ -11,12 +11,17 @@ let connection = mysql.createConnection({
 
 server.set("view engine", "ejs");
 
+server.use(express.json());
 server.use("/public", express.static("./public"));
 server.use(express.urlencoded({ extended: false }));
 
 server.get("/", (req, res) => {
+  res.render("index");
+});
+
+server.get("/getData", (req, res) => {
   let data = connection.query("select * from expenses", (err, data, fields) => {
-    res.render("index", { data: data });
+    res.render("tableData", { data: data });
   });
 });
 
@@ -26,6 +31,12 @@ server.post("/insert", (req, res) => {
     `insert into expenses(title,category,amount) values('${title}','${category}','${amount}')`
   );
   res.redirect("/");
+});
+
+server.delete("/delete", (req, res) => {
+  const { id } = req.body;
+  connection.query(`delete from expenses where id=${id}`);
+  res.send();
 });
 
 server.listen(8000);

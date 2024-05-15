@@ -21,7 +21,7 @@ form {
   grid-template-columns: 1fr 5fr;
 }
 
-button {
+form > button {
   cursor: pointer;
   padding: 4px;
   grid-column: span 2;
@@ -32,7 +32,7 @@ button {
   color: white;
 }
 
-button:hover {
+form > button:hover {
   background-color: #008e00;
 }
 input {
@@ -46,6 +46,10 @@ table {
   margin: 0 auto;
 }
 
+th {
+  text-transform: capitalize;
+  padding: 8px;
+}
 td {
   padding: 4px;
   width: 70px;
