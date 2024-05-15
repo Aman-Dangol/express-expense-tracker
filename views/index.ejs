@@ -5,11 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="/public/css/style.css">
+    <link rel="stylesheet" href="/public/css/style.css" />
   </head>
   <body>
     <main>
+      <!-- main header -->
       <header><h1>EXPENSE TRACKER</h1></header>
+      <!-- form for insert -->
+      <section>
+        <form action="/insert" method="post">
+          <label for="title">title</label>
+          <input type="text" name="title" /> <br />
+          <label for="category">category</label>
+          <input type="text" name="category" /> <br />
+          <label for="amount">amount</label>
+          <input type="text" name="amount" /><br />
+          <button>submit</button>
+        </form>
+      </section>
+      <!-- table section -->
       <section>
         <table>
           <thead>
